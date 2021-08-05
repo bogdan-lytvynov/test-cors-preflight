@@ -1,0 +1,20 @@
+{
+  "name": "test-cors-preflight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-personal:bogdan-lytvynov/test-cors-preflight.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "serve-favicon": "^2.5.0"
+  }
+}
