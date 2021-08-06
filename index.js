@@ -20,11 +20,11 @@ app.use((_, resp, next) => {
   next()
 })
 
-app.use(express.static('public'))
+app.get('/', function(req, res){
+  res.send('Hello World');
+});
 
-app.get('/', (req, res) => {
-  return res.sendfile('/public/index.html');
-})
+app.use(express.static('public'))
 
 app.use(favicon(__dirname + '/public/favicon.ico'));
 
@@ -49,7 +49,7 @@ app.use(function(err, req, res, next){
   // here and next(err) appropriately, or if
   // we possibly recovered from the error, simply next().
   res.status(err.status || 500);
-  res.render('500', { error: err });
+  res.json({ error: err });
 });
 
 app.listen(PORT, () => {
