@@ -5,9 +5,18 @@
   <body>
     <img src="/no-image.png" />
     <script>
-      fetch('https://nel-reports.herokuapp.com/cors').then(resp => {
+      fetch('https://nel-reports.herokuapp.com/mode/no-cors', {
+        mode: 'no-cors'
+      }).then(resp => {
         const div = document.createElement('div')
-        div.textContent = `Response ${resp.status}`
+        div.textContent = `No-Cors mode response ${resp.status}`
+        document.body.appendChild(div)
+      })
+
+
+      fetch('https://nel-reports.herokuapp.com/mode/cors').then(resp => {
+        const div = document.createElement('div')
+        div.textContent = `Cors Response ${resp.status}`
         document.body.appendChild(div)
       })
     </script>
