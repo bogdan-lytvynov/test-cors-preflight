@@ -6,7 +6,7 @@
     <img src="/no-image.png" />
     <img src="/no-image2.png" />
     <script>
-      fetch('https://nel-reports.herokuapp.com/mode/no-cors', {
+      fetch('https://nel-reports.herokuapp.com/cors', {
         mode: 'no-cors'
       }).then(resp => {
         const div = document.createElement('div')
@@ -15,7 +15,7 @@
       })
 
 
-      fetch('https://nel-reports.herokuapp.com/mode/cors').then(resp => {
+      fetch('https://nel-reports.herokuapp.com/cors').then(resp => {
         const div = document.createElement('div')
         div.textContent = `Cors Response ${resp.status}`
         document.body.appendChild(div)
