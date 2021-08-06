@@ -11,12 +11,13 @@ app.use((_, resp, next) => {
     'max_age': 604800
   }))
 
-  resp.set('report-to', JSON.stringify({
-    "endpoints": [{"url":"https://nel-reports.herokuapp.com/report"}],
-    "group":"default",
-    "max_age":604800,
-    "include_subdomains":true
-  }))
+  resp.set('report-to', '{"endpoints":[{"url":"https:\\/\\/nel-reports.herokuapp.com\\/report"}],"group":"default","max_age":604800,"include_subdomains":true}')
+//  resp.set('report-to', JSON.stringify({
+//    "endpoints": [{"url":"https://nel-reports.herokuapp.com/report"}],
+//    "group":"default",
+//    "max_age":604800,
+//    "include_subdomains":true
+//  }))
   next()
 })
 
